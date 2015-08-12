@@ -1,15 +1,15 @@
-//IsPrimeNumber.c
+//IsPrimeNumber.cpp
 /*
-ÆÄÀÏ ÀÌ¸§: IsPrimeNumber.c
-±â     ´É: ¼ö¸¦ ÀÔ·Â¹Ş¾Æ ¼Ò¼öÀÎÁö ÆÇº°ÇÑ´Ù.
-ÀÛ ¼º  ÀÚ: ¼Û ¿ë ´Ü
-ÀÛ¼º ÀÏÀÚ: 2015³â 8¿ù 12ÀÏ
+íŒŒì¼ ì´ë¦„: IsPrimeNumber.cpp
+ê¸°     ëŠ¥: ìˆ˜ë¥¼ ì…ë ¥ë°›ì•„ ì†Œìˆ˜ì¸ì§€ íŒë³„í•œë‹¤.
+ì‘ ì„±  ì: ì†¡ ìš© ë‹¨
+ì‘ì„± ì¼ì: 2015ë…„ 8ì›” 12ì¼
 */
-#include <stdio.h>// ÀüÃ³¸®±â Preprocesser : ¸ÅÅ©·Î
-//type name(ÀÚ·á¸í) ¼±¾ğ
+#include <stdio.h>// ì „ì²˜ë¦¬ê¸° Preprocesser : ë§¤í¬ë¡œ
+//type name(ìë£Œëª…) ì„ ì–¸
 typedef unsigned long int ULong;
 typedef enum boolean{ FALSE = 0, TRUE = 1 } Boolean;
-//ÇÔ¼ö ¼±¾ğ : ÇÔ¼ö ¿øÇü(Function Prototype)
+//í•¨ìˆ˜ ì„ ì–¸ : í•¨ìˆ˜ ì›í˜•(Function Prototype)
 int main(int argc, char *argv[]);
 ULong Input();
 Boolean IsPrimeNumber(ULong number);
@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
 	ULong number;
 	Boolean isPrimeNumber;
 
-	// ÇÔ¼ö È£Ãâ ¹®ÀÚ: Ä¡È¯½Ä + È£Ãâ½Ä
+	// í•¨ìˆ˜ í˜¸ì¶œ ë¬¸ì: ì¹˜í™˜ì‹ + í˜¸ì¶œì‹
 	number = Input();
 	isPrimeNumber = IsPrimeNumber(number);
 	Output(number, isPrimeNumber);
@@ -28,10 +28,10 @@ int main(int argc, char *argv[]) {
 }
 
 /*
-ÇÔ¼öÀÌ¸§: Input
-±â    ´É: Å°º¸µå·Î ÀÔ·ÂµÈ ¼ö¸¦ Ãâ·ÂÇÑ´Ù.
-ÀÔ    ·Â: ¾øÀ½
-Ãâ    ·Â: ¼ö
+í•¨ìˆ˜ì´ë¦„: Input
+ê¸°    ëŠ¥: í‚¤ë³´ë“œë¡œ ì…ë ¥ëœ ìˆ˜ë¥¼ ì¶œë ¥í•œë‹¤.
+ì…    ë ¥: ì—†ìŒ
+ì¶œ    ë ¥: ìˆ˜
 */
 ULong Input() {
 	ULong number;
@@ -40,10 +40,10 @@ ULong Input() {
 }
 
 /*
-ÇÔ¼öÀÌ¸§: IsPrimeNumber
-±â    ´É: ÀÔ·ÂµÈ ¼ö°¡ ¼Ò¼öÀÎÁö È®ÀÎÇÑ´Ù.
-ÀÔ    ·Â: ¼ö
-Ãâ    ·Â: ¼Ò¼ö¿©ºÎ
+í•¨ìˆ˜ì´ë¦„: IsPrimeNumber
+ê¸°    ëŠ¥: ì…ë ¥ëœ ìˆ˜ê°€ ì†Œìˆ˜ì¸ì§€ í™•ì¸í•œë‹¤.
+ì…    ë ¥: ìˆ˜
+ì¶œ    ë ¥: ì†Œìˆ˜ì—¬ë¶€
 */
 Boolean IsPrimeNumber(ULong number)
 {
@@ -72,16 +72,16 @@ Boolean IsPrimeNumber(ULong number)
 }
 
 /*
-ÇÔ¼öÀÌ¸§: Output
-±â    ´É: ¼ö¿Í ¼Ò¼ö¿©ºÎ¸¦ ÀÔ·Â¹Ş¾Æ ¸ğ´ÏÅÍ¿¡ ¸Ş¼¼Áö¸¦ Ãâ·ÂÇÑ´Ù.
-ÀÔ    ·Â: ¼ö, ¼Ò¼ö¿©ºÎ
-Ãâ    ·Â: ¾øÀ½
+í•¨ìˆ˜ì´ë¦„: Output
+ê¸°    ëŠ¥: ìˆ˜ì™€ ì†Œìˆ˜ì—¬ë¶€ë¥¼ ì…ë ¥ë°›ì•„ ëª¨ë‹ˆí„°ì— ë©”ì„¸ì§€ë¥¼ ì¶œë ¥í•œë‹¤.
+ì…    ë ¥: ìˆ˜, ì†Œìˆ˜ì—¬ë¶€
+ì¶œ    ë ¥: ì—†ìŒ
 */
 void Output(ULong number, Boolean isPrimeNumber) {
 	if (isPrimeNumber == TRUE) {
-		printf("%d´Â(Àº) ¼Ò¼öÀÔ´Ï´Ù!\n", number);
+		printf("%dëŠ”(ì€) ì†Œìˆ˜ì…ë‹ˆë‹¤!\n", number);
 	}
 	else {
-		printf("%d´Â(Àº) ÇÕ¼º¼öÀÔ´Ï´Ù!\n", number);
+		printf("%dëŠ”(ì€) í•©ì„±ìˆ˜ì…ë‹ˆë‹¤!\n", number);
 	}
 }
